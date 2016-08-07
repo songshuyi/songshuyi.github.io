@@ -33,7 +33,7 @@
             <a class="play_icon next" @click="switch('next')"></a>
         </div>
     </footer>
-    <audio :src="now_play.src" id="myAudio" onended="app.switch('next');" ontimeupdate="init()" onloadedmetadata="app.duration = covert_time(myAudio.duration);app.play()"></audio>
+    <audio :src="now_play.src" id="myAudio" onended="app.switch('next');" ontimeupdate="init()" oncanplaythrough="app.duration = covert_time(myAudio.duration);app.play()"></audio>
     <div class="mask"></div>
 <script type="text/javascript" src="js/lib.js"></script>
 </body>
