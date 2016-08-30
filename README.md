@@ -1,3 +1,4 @@
+<pre>
 http://songshuyi.github.io/pay_img/    //红包照片
 http://songshuyi.github.io/music/      //音乐播放器
 
@@ -149,3 +150,4 @@ function getTime(end_time,now_time,callback){
         callback(day,hour,minute,second);
     },1000);
 }
+</pre>
