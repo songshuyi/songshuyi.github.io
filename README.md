@@ -1,6 +1,7 @@
-<pre style="font-size: 24px;color: #666;">
-http://songshuyi.github.io/pay_img/    //红包照片
-http://songshuyi.github.io/music/      //音乐播放器
+<pre>
+<div  style="font-size: 24px;color: #666;">
+<a src="http://songshuyi.github.io/pay_img/">http://songshuyi.github.io/pay_img/</a>    //红包照片
+<a src="http://songshuyi.github.io/music/">http://songshuyi.github.io/music/</a>      //音乐播放器
 
 new命令的原理
 1.创建一个空对象，作为将要返回的对象实例
@@ -27,7 +28,7 @@ progress样式
 }
 
 微信分享
-//<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js">
+引入http://res.wx.qq.com/open/js/jweixin-1.0.0.js
 wx.config({
     debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来
     appId: '<?php echo $config['appid'];?>', // 必填，公众号的唯一标识
@@ -92,14 +93,14 @@ function post(url,param,callback){
 }
 
 图片延迟加载
-//<script src="echo.min.js"></script>
+引入echo.min.js
 echo.init({
     offset: 0,
     throttle: 0
 });
 
 轮播图
-//<script src="TouchSlide.1.1.js"></script>
+引入TouchSlide.1.1.js
 TouchSlide({
     slideCell:"#slideBox",
     titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
@@ -111,7 +112,7 @@ TouchSlide({
 });
 
 h5打开app
-//<script src="http://a.mlinks.cc/scripts/dist/mlink.min.js"></script>
+引入http://a.mlinks.cc/scripts/dist/mlink.min.js
 var btn = document.querySelector("a#like");
 new Mlink([
     {
@@ -150,4 +151,5 @@ function getTime(end_time,now_time,callback){
         callback(day,hour,minute,second);
     },1000);
 }
+</div>
 </pre>
