@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <input id="speak" type="search" x-webkit-speech speech/>
+    <script>
+        if(window.SpeechRecognition || window.webkitSpeechRecognition){
+            var recognition = new SpeechRecognition();
+            recognition.maxAlternatives = 5;
+            recognition.onresult = function(e){
+                if(e.results.length > 0){
+                    var results = e.results[0],topResult = results[0];
+                    if(topResult.confidence > 0.5){
+                        document.getElementById('speak').value = topResult.transcript;
+                    }else{
+                        document.getElementById('speak').value = 'Try again please';
+                    }
+                }
+            }
+        }
+        if (navigator.vibrate || navigator.webkitVibrate) {
+            navigator.vibrate(3000);
+        }
+    </script>
+</body>
+</html>
