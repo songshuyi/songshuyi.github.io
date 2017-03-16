@@ -8,7 +8,7 @@
     <input id="speak" type="search" x-webkit-speech speech/>
     <script>
         if(window.SpeechRecognition || window.webkitSpeechRecognition){
-            var recognition = new SpeechRecognition();
+            var recognition = new webkitSpeechRecognition();
             recognition.maxAlternatives = 5;
             recognition.onresult = function(e){
                 if(e.results.length > 0){
@@ -22,7 +22,7 @@
             }
         }
         if (navigator.vibrate || navigator.webkitVibrate) {
-            navigator.vibrate(3000);
+            navigator.webkitVibrate(3000);
         }
     </script>
 </body>
