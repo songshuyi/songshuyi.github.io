@@ -3,6 +3,8 @@
 <a src="http://songshuyi.github.io/pay_img/">http://songshuyi.github.io/pay_img/</a>    //红包照片
 <a src="http://songshuyi.github.io/music/">http://songshuyi.github.io/music/</a>      //音乐播放器
 
+pageshow事件有一个persisted属性，返回一个布尔值。页面第一次加载时或没有从缓存加载时，这个属性是false；当页面从缓存加载时，这个属性是true
+
 new命令的原理
 1.创建一个空对象，作为将要返回的对象实例
 2.将这个空对象的原型，指向构造函数的prototype属性
